@@ -7,7 +7,7 @@ const getData = async (id) => {
   if (process.env.NODE_ENV === "development")
     url = `http://localhost:3000/api/posts/${id}`;
   if (process.env.NODE_ENV === "production")
-    url = `https://phenomenal.vercel.app/api/posts/${id}`;
+    url = `https://phenomenal-omega.vercel.app/api/posts/${id}`;
 
   const res = await fetch(url, {
     cache: "no-store",
