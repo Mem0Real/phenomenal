@@ -3,7 +3,13 @@ import React from "react";
 import { notFound } from "next/navigation";
 
 const getData = async (id) => {
-  const res = await fetch(`http:localhost:3000/api/posts/${id}`, {
+  let url;
+  if (process.env.NODE_ENV === "development")
+    url = `http://localhost:3000/api/posts/${id}`;
+  if (process.env.NODE_ENV === "production")
+    url = `https://phenomenal.vercel.app/api/posts/${id}`;
+
+  const res = await fetch(url, {
     cache: "no-store",
   });
 

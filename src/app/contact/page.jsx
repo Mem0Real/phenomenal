@@ -11,7 +11,7 @@ const Contact = () => {
   return (
     <div className="">
       <h1 className="text-6xl mb-24 text-center font-semibold">
-        Let's Keep in Touch
+        Let&apos;s Keep in Touch
       </h1>
       <div className="flex gap-24 items-center">
         <div className="flex-1 relative h-96">
