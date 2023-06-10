@@ -56,20 +56,13 @@ const Navbar = () => {
             {link.title}
           </Link>
         ))}
-        {session.status === "authenticated" ? (
+        {session.status === "authenticated" && (
           <button
             className={`bg-red-500 px-3 py-2 text-white rounded-full text-xs`}
             onClick={signOut}
           >
             Logout
           </button>
-        ) : (
-          <Link
-            className={`bg-green-500 px-3 py-2 text-white rounded-full text-xs`}
-            href="/dashboard/login"
-          >
-            Login
-          </Link>
         )}
       </div>
     </div>
